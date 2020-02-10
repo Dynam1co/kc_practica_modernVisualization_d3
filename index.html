@@ -2,18 +2,34 @@
 <html lang="es">
     <head>
         <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
-        <link rel="stylesheet" href="style.css">
-        <script type="module" src="index.js"></script>
-        <script src="https://d3js.org/d3.v5.min.js"></script>
-        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <link rel="stylesheet" href="style.css">      
+        <script src="dataset.js"></script>
+        <script src="mapa.js"></script>
+        <script src="https://d3js.org/d3.v5.min.js"></script>        
         <title>Práctica Modern Visualization D3</title>                
     </head>
     <body>
         <h1>Práctica Modern Visualization D3</h1>
         <h2>Francisco Javier Asensi Benito</h2>
 
-        <div>
-            <script src="mapa.js"></script>
-        </div>
+        <table>
+            <tr>
+                <td><div id="colormap" class="d3graph"></div></td>
+                <td><div id ="graficoBarras"></div></td>
+            </tr>
+        </table>            
+
+        <script>
+            var dataset = loadData()
+            dataset.then(data => {                
+
+                // Dibuja el Mapa, y desencadena el resto
+                drawMapColorByPrice(
+                    data, 
+                    "#colormap",
+                    900,
+                    600)                
+            })
+        </script>        
     </body>
 </html>

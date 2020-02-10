@@ -1,14 +1,28 @@
 body {
     font: 12px sans-serif;
-  }
+}
   
-  path {
+path {
     stroke-width: 1px;
     stroke: white;
     fill: steelblue;
     cursor: pointer;
-  }
+}
   
-  path:hover, path.highlighted {
+path:hover, path.highlighted {
     fill: tomato;
-  }
+}
+
+.tooltip {
+  font-family: sans-serif; 
+  font-size: 18px; 
+  font-weight: 400; 
+  color: #ffffff; 
+  background:#5878ca;
+  border-radius: 35px 0px 35px 0px;
+  -moz-border-radius: 35px 0px 35px 0px;
+  -webkit-border-radius: 35px 0px 35px 0px;
+  
+  text-align: center;
+font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif
+}
