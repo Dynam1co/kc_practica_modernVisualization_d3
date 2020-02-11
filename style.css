@@ -2,15 +2,6 @@ body {
   font: 12px sans-serif;
 }
 
-/*
-path {
-  stroke-width: 1px;
-  stroke: white;
-  fill: steelblue;
-  cursor: pointer;
-}
-*/
-
 path:hover, path.highlighted {
   fill: #CD5C5C;
 }
@@ -23,7 +14,6 @@ path:hover, path.highlighted {
 
 }
 
-
 .tooltip {
   font-family: sans-serif; 
   font-size: 18px; 
@@ -32,12 +22,10 @@ path:hover, path.highlighted {
   background:#313639;
   border-radius: 35px 0px 35px 0px;
   -moz-border-radius: 35px 0px 35px 0px;
-  -webkit-border-radius: 35px 0px 35px 0px;
-  
+  -webkit-border-radius: 35px 0px 35px 0px;  
   text-align: center;
-font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif
+  font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif
 }
-
 
 .labels {
   font-family: "sans-serif";
@@ -48,9 +36,9 @@ font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif
 
 .grid path,
 .grid line {
-    stroke-width: 1px;
-    stroke: grey;
-    fill: none; 
+  stroke-width: 1px;
+  stroke: grey;
+  fill: none; 
 }
 
 .contenedor {
@@ -62,5 +50,10 @@ font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif
   margin: 10px;
   padding: 20px;
   border-radius: 15px;
-  }
+}
 
+.regLine{
+  stroke:black;
+  stroke-width:2px;
+  opacity:0.7
+}

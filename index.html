@@ -6,12 +6,18 @@
         <script src="dataset.js"></script>
         <script src="mapa.js"></script>
         <script src="barras.js"></script>
-        <script src="https://d3js.org/d3.v5.min.js"></script>            
+        <script src="regres.js"></script>
+        <script src="https://d3js.org/d3.v5.min.js"></script>                    
+        <script src="https://unpkg.com/simple-statistics@7.0.2/dist/simple-statistics.min.js"></script>
         <title>Práctica Modern Visualization D3</title>                
     </head>
     <body>
         <h1>Práctica Modern Visualization D3</h1>
-        <h2>Francisco Javier Asensi Benito</h2>        
+        <h2>Francisco Javier Asensi Benito</h2>
+
+        <h3>Funcionamiento</h3>
+        <h4>Al parar el cursor por encima de cada barrio, se mostrará el nombre del barrio y el precio medio de los apartamentos Airbnb de ese barrio.</h4>
+        <h4>Si hacemos click en algún barrio, el gráfico de barras de la derecha se actualizará mostrando el número de apartamentos por número de habitaciones en ese barrio.</h4>
 
         <table>
             <tr>
@@ -25,8 +31,12 @@
                         <div id="barchart" class="d3graph"></div>
                     </div>
                 </td>
-            </tr>
-        </table>            
+            </tr>            
+        </table>    
+        
+        <div class="contenedor">
+            <div id="regres" class="d3graph"></div>
+        </div>
 
         <script>
             var dataset = loadData()
@@ -36,8 +46,18 @@
                 drawMapColorByPrice(
                     data, 
                     "#colormap",
+                    600,
+                    500)      
+                    
+                // Chart regresión
+                drawPointChar(
+                    data,
+                    "#regres",
+                    "Precio Medio por Nº apartamentos",
+                    "Precio",
+                    "Nº apartamentos",
                     900,
-                    600)                                                          
+                    500)
             })
         </script>        
     </body>

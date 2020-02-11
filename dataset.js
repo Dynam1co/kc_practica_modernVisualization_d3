@@ -30,3 +30,19 @@ function avgbedroomsToArrayByIndex(data, index) {
     console.log(result)
     return result 
 }
+
+function avgPriceVsTotalProperties(data){
+    var result = []
+    data["features"].forEach(feature => {
+          var totalProperties = 0;
+          feature["properties"]["avgbedrooms"].forEach(avgBedrooms => 
+                totalProperties += avgBedrooms["total"])
+          if (typeof feature["properties"]["avgprice"] != 'undefined') {
+                result.push([
+                      feature["properties"]["name"],
+                      feature["properties"]["avgprice"], 
+                      totalProperties])
+          }
+    })
+    return result
+}

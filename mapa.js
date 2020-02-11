@@ -2,10 +2,10 @@ var tooltip = '';
 var colors;
 var nuevoBarrio = 'Orcasitas';
 
-function drawMapColorByPrice(data, tagName, xSize = 900, ySize = 600) {
+function drawMapColorByPrice(data, tagName, xSize = 600, ySize = 500) {
 
     const geoCenterMadrid = [-3.703521, 40.417007] 
-    const scaleF = 70
+    const scaleF = 90
     const mapStrokeColor = "#FFFFFF"
 
     // Gráfico barras con barrio por defecto
