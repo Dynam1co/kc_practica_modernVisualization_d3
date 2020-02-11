@@ -5,17 +5,26 @@
         <link rel="stylesheet" href="style.css">      
         <script src="dataset.js"></script>
         <script src="mapa.js"></script>
-        <script src="https://d3js.org/d3.v5.min.js"></script>        
+        <script src="barras.js"></script>
+        <script src="https://d3js.org/d3.v5.min.js"></script>            
         <title>Práctica Modern Visualization D3</title>                
     </head>
     <body>
         <h1>Práctica Modern Visualization D3</h1>
-        <h2>Francisco Javier Asensi Benito</h2>
+        <h2>Francisco Javier Asensi Benito</h2>        
 
         <table>
             <tr>
-                <td><div id="colormap" class="d3graph"></div></td>
-                <td><div id ="graficoBarras"></div></td>
+                <td>
+                    <div class="contenedor">
+                        <div id="colormap" class="d3graph"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="contenedor">
+                        <div id="barchart" class="d3graph"></div>
+                    </div>
+                </td>
             </tr>
         </table>            
 
@@ -28,7 +37,7 @@
                     data, 
                     "#colormap",
                     900,
-                    600)                
+                    600)                                                          
             })
         </script>        
     </body>
